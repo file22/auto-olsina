@@ -1,0 +1,572 @@
+/* Auto Olšina - styly pro obrazovku (verze 2) */
+/* autor: Filip Olšina, 4IZ268 */
+
+/* Barvy a kontrast (spočítáno podle WCAG):
+   text #1c1f1c na bílé ............ 16,6 : 1
+   zelená #376432 na bílé .......... 6,9 : 1
+   bílá na tmavé #141614 ........... 18,4 : 1
+   šedá #c5cbc4 na #141614 ......... 11,2 : 1
+   sv. zelená #8fc787 na #141614 ... 9,3 : 1
+   bílá na zelené #376432 .......... 6,9 : 1
+   šedá #555b55 na bílé ............ 6,9 : 1 */
+
+body {
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1c1f1c;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #376432;
+}
+
+a:hover {
+  color: #1c1f1c;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 40px;
+}
+
+/* krátká zelená čárka pod nadpisy h2 */
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-top: 8px;
+  background-color: #376432;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.obal {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.zelene {
+  color: #8fc787;
+}
+
+/* odkaz Přeskočit na obsah - ukáže se až po stisku Tab */
+.preskocit {
+  position: absolute;
+  left: -9999px;
+}
+
+.preskocit:focus {
+  left: 10px;
+  top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #376432;
+}
+
+/* hlavička */
+.hlavicka {
+  background-color: #141614;
+  border-bottom: 4px solid #376432;
+}
+
+.hlavicka .obal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo img {
+  display: block;
+  width: 180px;
+}
+
+/* text loga je jen pro tisk */
+.logo-text {
+  display: none;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 11px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 3px solid #141614;
+}
+
+.menu a:hover {
+  color: #8fc787;
+  text-decoration: underline;
+}
+
+.menu .aktivni {
+  background-color: #376432;
+  border-bottom-color: #8fc787;
+}
+
+/* obsah */
+main {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.perex {
+  font-size: 18px;
+}
+
+/* úvodní tmavý blok */
+.uvod {
+  background-color: #141614;
+  background-image: linear-gradient(120deg, #141614 62%, #1e2b1c 62%);
+  color: #ffffff;
+  padding: 40px 40px 25px 40px;
+  border-bottom: 6px solid #376432;
+}
+
+.uvod .perex {
+  max-width: 620px;
+  color: #c5cbc4;
+}
+
+.fakta {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+}
+
+.fakta li {
+  width: 180px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-left: 3px solid #376432;
+  color: #c5cbc4;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fakta strong {
+  display: block;
+  color: #8fc787;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.tlacitko {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  padding: 12px 24px;
+  background-color: #376432;
+  border: 2px solid #376432;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.tlacitko:hover {
+  background-color: #2a4d26;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.tlacitko-svetle {
+  background-color: #141614;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.tlacitko-svetle:hover {
+  background-color: #ffffff;
+  color: #141614;
+}
+
+/* karty se službami */
+.karty {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.karta {
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 5px 22px 10px 22px;
+  background-color: #f2f4f1;
+  border-bottom: 4px solid #376432;
+  box-sizing: border-box;
+}
+
+.karta h3 a {
+  color: #1c1f1c;
+}
+
+.karta h3 a:hover {
+  color: #376432;
+}
+
+.cislo {
+  display: block;
+  color: #376432;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* značky */
+.znacky {
+  list-style: none;
+  padding: 0;
+}
+
+.znacky li {
+  display: inline-block;
+  margin: 0 6px 10px 0;
+  padding: 6px 16px;
+  border: 2px solid #1c1f1c;
+  font-weight: bold;
+}
+
+/* O nás - text a fotka vedle sebe */
+.o-nas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.o-nas-text,
+.o-nas figure {
+  width: 48%;
+}
+
+.o-nas figure {
+  margin: 80px 0 0 0;
+}
+
+figure img {
+  border-bottom: 4px solid #376432;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #555b55;
+}
+
+/* výzva na konci úvodní stránky */
+.vyzva {
+  margin-top: 40px;
+  padding: 10px 40px 20px 40px;
+  background-color: #376432;
+  color: #ffffff;
+}
+
+.vyzva h2::after {
+  background-color: #ffffff;
+}
+
+.vyzva .tlacitko {
+  background-color: #ffffff;
+  color: #376432;
+}
+
+.vyzva .tlacitko:hover {
+  background-color: #141614;
+  color: #ffffff;
+}
+
+/* nadpis podstránky v tmavém pásu */
+.hlava-stranky {
+  background-color: #141614;
+  color: #ffffff;
+  padding: 30px 30px 10px 30px;
+  border-left: 6px solid #376432;
+}
+
+.hlava-stranky .perex {
+  color: #c5cbc4;
+}
+
+/* číslované kroky */
+.kroky {
+  padding-left: 25px;
+}
+
+.kroky li {
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+.kroky li::marker {
+  color: #376432;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* dva sloupce: obsah a postranní panel */
+.sloupce {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sloupce main {
+  width: 68%;
+}
+
+.sloupce aside {
+  width: 28%;
+  padding-top: 30px;
+}
+
+/* tmavé boxy v postranním panelu */
+.box {
+  background-color: #141614;
+  color: #ffffff;
+  padding: 5px 22px 10px 22px;
+  margin-bottom: 20px;
+  border-top: 4px solid #376432;
+}
+
+.box h2 {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.box a {
+  color: #8fc787;
+}
+
+.box a:hover {
+  color: #ffffff;
+}
+
+.box ul {
+  padding-left: 20px;
+}
+
+.box dd {
+  color: #c5cbc4;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 8px 0;
+  color: #555b55;
+}
+
+.poznamka {
+  font-size: 14px;
+  color: #c5cbc4;
+}
+
+/* tabulka s vozy */
+.tabulka {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabulka caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.tabulka th,
+.tabulka td {
+  padding: 10px;
+  border-bottom: 1px solid #d3d8d2;
+  text-align: left;
+}
+
+.tabulka thead th {
+  background-color: #376432;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tabulka .cena {
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.tabulka td.cena {
+  color: #376432;
+}
+
+/* patička */
+.paticka {
+  background-color: #141614;
+  color: #c5cbc4;
+  border-top: 6px solid #376432;
+  padding-bottom: 25px;
+  font-size: 15px;
+}
+
+.paticka .obal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.paticka section {
+  width: 30%;
+}
+
+.paticka h2 {
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.paticka a {
+  color: #8fc787;
+}
+
+.paticka a:hover {
+  color: #ffffff;
+}
+
+/* menší obrazovky */
+@media (max-width: 900px) {
+  .sloupce {
+    display: block;
+  }
+
+  .sloupce main,
+  .sloupce aside {
+    width: auto;
+  }
+
+  .sloupce aside {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+/* mobil */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .hlavicka nav {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .menu a {
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+
+  .uvod,
+  .hlava-stranky,
+  .vyzva {
+    padding: 20px 18px 10px 18px;
+  }
+
+  .karta,
+  .o-nas-text,
+  .o-nas figure,
+  .paticka section {
+    width: auto;
+  }
+
+  .o-nas,
+  .karty {
+    display: block;
+  }
+
+  .o-nas figure {
+    margin: 20px 0;
+  }
+
+  .fakta li {
+    width: 130px;
+  }
+}
+
+/* tabulka se pod 600 px změní na kartičky */
+@media (max-width: 600px) {
+  .tabulka thead {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .tabulka,
+  .tabulka caption,
+  .tabulka tbody,
+  .tabulka tr,
+  .tabulka th,
+  .tabulka td {
+    display: block;
+  }
+
+  .tabulka tr {
+    background-color: #f2f4f1;
+    border-left: 4px solid #376432;
+    margin-bottom: 15px;
+    padding: 8px 0;
+  }
+
+  .tabulka th,
+  .tabulka td {
+    border: none;
+    padding: 3px 14px;
+  }
+
+  .tabulka td::before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    color: #1c1f1c;
+  }
+
+  .tabulka .cena {
+    text-align: left;
+  }
+}

@@ -1,0 +1,131 @@
+/* Auto Olšina - tisková verze */
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12pt;
+  line-height: 1.4;
+  color: #000000;
+  background: #ffffff;
+}
+
+/* navigace a odkaz pro přeskočení se netisknou */
+.preskocit,
+.hlavicka nav,
+.menu,
+.tlacitka,
+.tlacitko,
+.vyzva,
+.cislo {
+  display: none;
+}
+
+/* logo má bílý text, na papíře by nebyl vidět – tiskne se název webu */
+.logo img {
+  display: none;
+}
+
+.logo-text {
+  display: block;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.hlavicka {
+  border-bottom: 2pt solid #000000;
+  margin-bottom: 12pt;
+  padding-bottom: 6pt;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+/* u externích odkazů vypsat adresu */
+a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 9pt;
+}
+
+h1,
+h2,
+h3 {
+  color: #000000;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+h2 {
+  font-size: 15pt;
+}
+
+img,
+figure,
+table,
+tr {
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 10cm;
+  height: auto;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 10pt;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 4pt;
+}
+
+th,
+td {
+  border: 1pt solid #000000;
+  padding: 3pt 5pt;
+  text-align: left;
+}
+
+.box {
+  border: 1pt solid #000000;
+  padding: 0 8pt;
+  margin-top: 12pt;
+}
+
+.znacky li,
+.fakta li {
+  display: inline;
+  margin-right: 12pt;
+}
+
+.znacky,
+.fakta {
+  padding: 0;
+}
+
+.paticka {
+  border-top: 1pt solid #000000;
+  margin-top: 18pt;
+  font-size: 10pt;
+}
+
+.paticka h2 {
+  font-size: 11pt;
+  margin: 8pt 0 2pt;
+}
